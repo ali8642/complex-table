@@ -1,50 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complex Table Exercise</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex Table Exercise</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+    }
+
+    .seminar-table {
+      width: 80%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .seminar-table th,
+    .seminar-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    .seminar-table th {
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .seminar-table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .seminar-table tr:hover {
+      background-color: #e6f7e6;
+    }
+
+    .day-cell {
+      font-weight: bold;
+      background-color: #e8f5e9;
+    }
+
+    .time-cell {
+      font-family: 'Courier New', monospace;
+    }
+
+    .topic-cell {
+      color: #333;
+    }
+
+    caption {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      font-weight: bold;
+      color: #2E7D32;
+    }
+  </style>
 </head>
+
 <body>
-    <table border="1">
-        <tr>
-          <th rowspan="2">Day</th>
-          <th colspan="2">Seminar</th>
-        </tr>
-        <tr>
-          <th>Schedule</th>
-          <th>Topic</th>
-        </tr>
-        <tr>
-          <td rowspan="3">Monday</td>
-          <td>8:00 a.m.</td>
-          <td>5:00 p.m.</td>
-          <td>Introduction to XML Validity: DTD and Relax NG XPath</td>
-        </tr>
-        <tr>
-          <td>Tuesday</td>
-          <td>8:00 a.m.</td>
-          <td>11:00 a.m.</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>11:00 a.m.</td>
-          <td>2:00 p.m.</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>2:00 p.m.</td>
-          <td>5:00 p.m.</td>
-          <td>XSL Transformations</td>
-        </tr>
-        <tr>
-          <td>Wednesday</td>
-          <td>8:00 a.m.</td>
-          <td>12:00 p.m.</td>
-          <td>XSL Formatting Objects</td>
-        </tr>
-      </table>
+
+  <table class="seminar-table">
+    <caption>Seminar Schedule</caption>
+    <tr>
+      <th rowspan="2" class="day-cell">Day</th>
+      <th colspan="2">Seminar</th>
+    </tr>
+    <tr>
+      <th>Schedule</th>
+      <th>Topic</th>
+    </tr>
+    <tr>
+      <td rowspan="3" class="day-cell">Monday</td>
+      <td class="time-cell">8:00 a.m.</td>
+      <td class="time-cell">5:00 p.m.</td>
+      <td class="topic-cell">Introduction to XML Validity: DTD and Relax NG XPath</td>
+    </tr>
+    <tr>
+      <td class="day-cell">Tuesday</td>
+      <td class="time-cell">8:00 a.m.</td>
+      <td class="time-cell">11:00 a.m.</td>
+      <td class="topic-cell"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="time-cell">11:00 a.m.</td>
+      <td class="time-cell">2:00 p.m.</td>
+      <td class="topic-cell"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="time-cell">2:00 p.m.</td>
+      <td class="time-cell">5:00 p.m.</td>
+      <td class="topic-cell">XSL Transformations</td>
+    </tr>
+    <tr>
+      <td class="day-cell">Wednesday</td>
+      <td class="time-cell">8:00 a.m.</td>
+      <td class="time-cell">12:00 p.m.</td>
+      <td class="topic-cell">XSL Formatting Objects</td>
+    </tr>
+  </table>
 </body>
+
 </html>
